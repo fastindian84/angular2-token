@@ -7,7 +7,7 @@
   "scripts": {
     "test": "karma start",
     "build": "rm -rf lib && tsc",
-    "prepublish": "npm run build"
+    "postinstall": "npm run build"
   },
   "keywords": [
     "angular2",
