@@ -327,7 +327,7 @@ export class Angular2TokenService implements CanActivate {
         });
     }
 
-    private _parseAuthHeadersFromResponse(data: any){
+    protected _parseAuthHeadersFromResponse(data: any){
         let headers = data.headers;
 
         let authData: AuthData = {
