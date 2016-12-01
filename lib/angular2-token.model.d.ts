@@ -13,6 +13,8 @@ export interface UserData {
     nickname: string;
     image: any;
     email: string;
+    avatar: string;
+    account_type: string;
 }
 export interface UserType {
     name: string;
