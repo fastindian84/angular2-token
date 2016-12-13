@@ -426,8 +426,9 @@ export class Angular2TokenService implements CanActivate {
         this._getAuthDataFromStorage();
         this._getAuthDataFromParams();
 
-        if (this._currentAuthData != null)
-            this.validateToken();
+        // In our implementations we load user in resolver
+        // if (this._currentAuthData != null)
+        //     this.validateToken();
     }
 
     // Match user config by user config name
