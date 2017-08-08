@@ -5,9 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/share';
 import { UserData, AuthData, Angular2TokenOptions } from './angular2-token.model';
 export declare class Angular2TokenService implements CanActivate {
-    private _http;
-    private _activatedRoute;
-    private _router;
+    protected _http: Http;
+    protected _activatedRoute: ActivatedRoute;
+    protected _router: Router;
     readonly currentUserType: string;
     readonly currentUserData: UserData;
     readonly currentAuthData: AuthData;
@@ -35,7 +35,7 @@ export declare class Angular2TokenService implements CanActivate {
     head(path: string): Observable<Response>;
     options(path: string): Observable<Response>;
     sendHttpRequest(requestOptions: RequestOptions): Observable<Response>;
-    private _handleResponse(response);
+    protected _handleResponse(response: Observable<Response>): void;
     protected _parseAuthHeadersFromResponse(data: any): void;
     private _getAuthDataFromStorage();
     private _getAuthDataFromParams();

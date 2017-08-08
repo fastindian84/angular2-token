@@ -43,9 +43,9 @@ export class Angular2TokenService implements CanActivate {
     private _currentUserData: UserData;
 
     constructor(
-        private _http: Http,
-        private _activatedRoute: ActivatedRoute,
-        private _router: Router
+        protected _http: Http,
+        protected _activatedRoute: ActivatedRoute,
+        protected _router: Router
     ) { }
 
     userSignedIn(): boolean {
@@ -311,14 +311,13 @@ export class Angular2TokenService implements CanActivate {
         baseRequestOptions = baseRequestOptions.merge(requestOptions);
 
         let response = this._http.request(new Request(baseRequestOptions)).share();
-
         this._handleResponse(response);
 
         return response;
     }
 
     // Check if response is complete and newer, then update storage
-    private _handleResponse(response: Observable<Response>) {
+    protected _handleResponse(response: Observable<Response>) {
         response.subscribe(res => {
             this._parseAuthHeadersFromResponse(<any>res);
         }, error => {
