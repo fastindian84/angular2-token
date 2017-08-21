@@ -1,8 +1,7 @@
 # Compiled Files
-lib
-*.js
-*.map
-*.d.ts
+# *.js
+# *.map
+# *.d.ts
 
 # Library directories
 node_modules
