@@ -9,7 +9,7 @@ export declare class Angular2TokenService implements CanActivate {
     protected _activatedRoute: ActivatedRoute;
     protected _router: Router;
     readonly currentUserType: string;
-    readonly currentUserData: UserData;
+    currentUserData: UserData;
     readonly currentAuthData: AuthData;
     private _options;
     private _currentUserType;
